@@ -12,3 +12,4 @@ services:
   cloudflared:
     image: cloudflare/cloudflared:2022.4.1
     command: tunnel --no-autoupdate run --token ${cloudflared_token}
+    restart: unless-stopped
