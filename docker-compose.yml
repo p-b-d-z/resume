@@ -8,6 +8,7 @@ services:
       - "9001:80"
     volumes:
       - /home/docker/config/resume/www:/usr/share/nginx/html:ro
+      - /home/docker/config/resume/nginx:/etc/nginx/conf.d/:ro
     restart: unless-stopped
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=1
