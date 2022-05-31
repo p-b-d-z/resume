@@ -9,7 +9,9 @@ services:
     volumes:
       - /home/docker/config/resume/www:/usr/share/nginx/html:ro
     restart: unless-stopped
-  cloudflared:
-    image: cloudflare/cloudflared:2022.4.1
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=1
+cloudflared:
+    image: cloudflare/cloudflared:2022.5.3
     command: tunnel --no-autoupdate run --token ${cloudflared_token}
     restart: unless-stopped
