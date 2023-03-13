@@ -1,18 +1,33 @@
 version: '3'
 
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    external: false
+    driver: bridge
+
 services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: resume_cloudflared
+    command: tunnel --no-autoupdate run --token ${cloudflare_token}
+    networks:
+      frontend:
+      backend:
+        aliases:
+          - cloudflared
+    restart: unless-stopped
   nginx:
     image: nginx:alpine
-    container_name: resume
-    ports:
-      - "9001:80"
+    container_name: resume_nginx
+    networks:
+      backend:
+        aliases:
+          - resume
     volumes:
       - /home/docker/config/resume/www:/usr/share/nginx/html:ro
       - /home/docker/config/resume/nginx:/etc/nginx/conf.d/:ro
     restart: unless-stopped
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=1
-cloudflared:
-    image: cloudflare/cloudflared:2022.5.3
-    command: tunnel --no-autoupdate run --token ${cloudflared_token}
-    restart: unless-stopped
