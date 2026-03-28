@@ -4,5 +4,6 @@ compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
 routes = [
-  { pattern = "resume.pbdz.xyz", zone_name = "pbdz.xyz" }
+  { pattern = "resume.pbdz.xyz", zone_name = "pbdz.xyz" },
+  { pattern = "resume.pobudz.net", zone_name = "pobudz.net" }
 ]
