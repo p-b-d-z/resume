@@ -11,7 +11,7 @@ export const resume = {
     eyebrow: "Enterprise Architect · Automation · Since 1995",
     promise: "I make infrastructure run itself.",
     pitch: "Global networks, hybrid cloud, and the automation layer that keeps all of it from becoming your job. Design it, build it, then hand it a robot.",
-    closingLead: "Got infrastructure that shouldn't need you twice?",
+    closingLead: "Infrastructure that runs itself.",
     closingAccent: "Let's talk.",
     ctaPrimary: "Email Joe",
     ctaSecondary: "See the track record",

@@ -9,6 +9,9 @@ cf-terraforming/
 
 # Cloudflare
 .wrangler
+.wrangler-home/
+.cloudflare/
+.envrc
 
 # .tfstate files
 #*.tfstate
@@ -57,6 +60,7 @@ terraform.rc
 test.sh
 
 # Node
+node_modules/
 */node_modules/*
 
 # Virtual environment
