@@ -7,6 +7,23 @@ export const resume = {
   },
   profile: "Master of robots. I design, I build, I automate. Writing code since 1995.",
 
+  pitch: {
+    eyebrow: "Enterprise Architect · Automation · Since 1995",
+    promise: "I make infrastructure run itself.",
+    pitch: "Global networks, hybrid cloud, and the automation layer that keeps all of it from becoming your job. Design it, build it, then hand it a robot.",
+    closingLead: "Got infrastructure that shouldn't need you twice?",
+    closingAccent: "Let's talk.",
+    ctaPrimary: "Email Joe",
+    ctaSecondary: "See the track record",
+    ctaSecondaryHref: "#track-record"
+  },
+
+  highlights: [
+    { value: "1995", label: "First line of code", note: "still shipping" },
+    { value: "32", label: "Rack private datacenter", note: "designed and deployed" },
+    { value: "3 / 18", label: "Countries / U.S. states", note: "on one global SD-WAN" }
+  ],
+
   skills: {
     design: {
       title: "Design",
